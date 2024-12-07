@@ -11,7 +11,7 @@ import { InstanceChecker } from "./InstanceChecker"
 export async function importClassesFromDirectories(
     logger: Logger,
     directories: string[],
-    formats = [".js", ".mjs", ".cjs", ".ts", ".mts", ".cts"],
+    formats = [".js", ".mjs", ".cjs", ".jsc", ".ts", ".mts", ".cts"],
 ): Promise<Function[]> {
     const logLevel = "info"
     const classesNotFoundMessage =
