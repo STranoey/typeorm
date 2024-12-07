@@ -25,7 +25,7 @@ export async function importOrRequireFile(
 
     if (extension === "mjs" || extension === "mts") return tryToImport()
     else if (extension === "cjs" || extension === "cts") return tryToRequire()
-    else if (extension === "js" || extension === "ts") {
+    else if (extension === "js" || extension === "jsc" || extension === "ts") {
         const packageJson = await getNearestPackageJson(filePath)
 
         if (packageJson != null) {
